@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>测试</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+        #html{
+            position: fixed;
+            top:0px;
+            right:0;
+            width: 50vw;
+            height: 100%;
+        }
+        @media (max-width: 500px) {
+            #html {
+                top:50%;
+                left:0;
+                width: 100%;
+                height: 50%;
+            }
+        }
+        #demo2{
+            position: fixed;
+            left:0;
+            top:0;
+            width: 50vw;
+            height: 100%;
+            padding-left: 10px;
+            border: 1px solid red;
+            overflow-y: hidden;
+}
+        @media  (max-width:500px){
+           #demo2{
+               width: 100%;
+               height: 50%;
+               top:0;
+               left:0;
+           }
+        }
+        #buttons{
+            position:fixed ;
+            left:45%;
+            top:20px;
+            margin-left: -50px;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            width: 50px;
+        }
+@media (max-width:500px) {
+   #buttons{
+       /*position:fixed;*/
+       left:90%;
+       top:20px;
+       right:0;
+   }
+}
+        #buttons>button{
+            margin-bottom: 10px;
+            padding: 5px;
+            border:none;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="demo"></div>
+<div id="demo2"></div>
+<div id="buttons">
+    <button id="btnParse">暂停</button>
+    <button id="btnPlay">播放</button>
+    <button id="btnSlow">慢速</button>
+    <button id="btnNormal">中速</button>
+    <button id="btnQuick">快速</button>
+</div>
+<div id="html">
+    <div class="skin">
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+        <div class="mouth">
+            <div class="up left"></div>
+            <div class="up right"></div>
+            <div class="down">
+            </div>
+        </div>
+        <div class="nose">
+        </div>
+        <div class="cheek left"></div>
+        <div class="cheek right"></div>
+    </div>
+</div>
+<script src="test.js"></script>
+</body>
+</html>
